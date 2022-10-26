@@ -13,14 +13,8 @@ let array1 = [
 function generateUsername(arr) {
     
     arr.forEach(item => {
-        let strMinusName = item.name.toLowerCase();
-        let strMinusSurname = item.surname.toLowerCase();
-        let a = strMinusName.split('',1);
-        let nickname = a+strMinusSurname;
-        
-        
-        let objeto = {nickname:nickname};
-        Object.assign(item, objeto);
+        //let a = strMinusName.split('',1);
+        Object.assign(item, {nickname:item.name.toLowerCase().charAt(0) + item.surname.toLowerCase() + Math.trunc(Math.random()*10).toString() + Math.trunc(Math.random()*10).toString()});
     }
     );
 }
