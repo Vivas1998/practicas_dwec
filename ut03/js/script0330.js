@@ -28,7 +28,7 @@ let arr = [
         }
     }
 ]
-function hasUpperLetter(str) {
+function mayuscula(str) {
     for (let i = 0; i < str.length; i++) {
         if(str[i] == str[i].toUpperCase())
             return true;
@@ -36,7 +36,7 @@ function hasUpperLetter(str) {
     return false;
 }
 
-function hasLowerLetter(str) {
+function minuscula(str) {
     for (let i = 0; i < str.length; i++) {
         if(str[i] == str[i].toLowerCase())
             return true;
@@ -44,7 +44,7 @@ function hasLowerLetter(str) {
     return false;
 }
 
-function hasDigit(str) {
+function numero(str) {
     for (let i = 0; i < str.length; i++) {
         if(Number.isInteger(Number(str[i])))
             return true;
@@ -55,7 +55,7 @@ function hasDigit(str) {
 function getUnsecurePass(arr) {
     let array2 = []
     arr.forEach(item => {
-        if(hasUpperLetter(item.pass) && hasLowerLetter(item.pass) && hasDigit(item.pass) && item.pass.length > 7) {
+        if(mayuscula(item.pass) && minuscula(item.pass) && numero(item.pass) && item.pass.length > 7) {
             let array = [item.nombre +" "+ item.ape1+" "+item.ape2];
             array2.push(array);
         }
