@@ -31,11 +31,13 @@ let arr = [
 
 function getAlumnosByCiclo(str) {
     let array = [];
+    let i = 0;
     arr.forEach(item => {
         if (item.ciclo = str) {
-            array.push(item.nombre + " " + item.ape1 + " " + item.ape2);
+            i++;
         }
     });
+    array.push(i);
     return array;
 }
 console.log(getAlumnosByCiclo('DIW'));

@@ -29,13 +29,11 @@ let arr = [
     }
 ]
 
-function getAlumnosByCiclo(str) {
+function getUsername(arr) {
     let array = [];
     arr.forEach(item => {
-        if (item.ciclo = str) {
-            array.push(item.nombre + " " + item.ape1 + " " + item.ape2);
-        }
+        array.push(item.nombre.toLowerCase() + item.ape1.toLowerCase().charAt(0));
     });
     return array;
 }
-console.log(getAlumnosByCiclo('DIW'));
+console.log(getUsername(arr));

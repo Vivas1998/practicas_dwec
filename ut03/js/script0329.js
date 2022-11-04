@@ -10,7 +10,7 @@ let arr = [
         notas: {
             DWEC: 7.8,
             DIW: 5.4,
-            DWEC: 9.4
+            DWES: 9.4
         }
     },
     {
@@ -28,14 +28,18 @@ let arr = [
         }
     }
 ]
-
-function getAlumnosByCiclo(str) {
-    let array = [];
+function getAverage(arr){
+    let array2 = [];
     arr.forEach(item => {
-        if (item.ciclo = str) {
-            array.push(item.nombre + " " + item.ape1 + " " + item.ape2);
-        }
+        let suma = 0;
+        let cont = 0;
+        for(let nota in item.notas){
+            suma += item.notas[nota];
+            cont++;
+        } 
+        let array = ["Alumno: " + item.nombre +" "+ item.ape1+" "+item.ape2 + ", expediente: " + item.expediente + ", nota media: " + suma/cont];
+        array2.push(array);
     });
-    return array;
-}
-console.log(getAlumnosByCiclo('DIW'));
+    return array2;
+    }
+console.log(getAverage(arr));

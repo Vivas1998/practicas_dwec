@@ -31,7 +31,7 @@ let arr = [
 function addNif(arr) {
     let letra = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
     arr.forEach(item => {
-       Object.assign(item, {'NIF':item.dni + letra[item.dni%23]});
+       item.nif = item.dni + letra[item.dni%23];
        delete item['dni'];
     });
     return arr;
