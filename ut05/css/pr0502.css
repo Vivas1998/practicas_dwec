@@ -1,0 +1,15 @@
+.selected {
+    background-color: yellow;
+}
+.selectedSecond {
+    background-color: red;
+}
+td {
+    border: 1px solid black;
+    padding: 50px;
+    cursor: pointer;
+    font-size: 150%;
+}
+table {
+    border-collapse: collapse;
+}
