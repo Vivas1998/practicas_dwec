@@ -14,5 +14,17 @@ body.append(table);
 tableItems = document.querySelectorAll('td');
 tableItems.forEach((td) => {
     td.addEventListener('click', handleClick);
-    td.onmousedown = function() {return false;}
 });
+
+tableItems = document.querySelectorAll('td');
+tableItems.forEach((td) => {
+    td.addEventListener('contextmenu', handleClick2);
+});
+
+function handleClick(event) {
+    event.target.classList.toggle('selected');
+}
+
+function handleClick2(event) {
+    event.target.classList.add('selectedSecond');
+}

@@ -1,0 +1,14 @@
+.titulo {
+    background-color: aquamarine;
+    text-align: center;
+}
+.juego { 
+    width: auto;
+    height: 800px;
+    position: relative;
+}
+.dibujo { 
+    background-color: red;
+    position: relative;
+    cursor: pointer;
+}

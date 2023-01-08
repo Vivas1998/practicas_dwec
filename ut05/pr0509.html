@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/pr0509.css">
+</head>
+<body>
+    <div class="fondo">
+        <div id="ventanaModal" class="modal">
+            <div class="modal-content">
+                <div class="parteSuperior">
+                    <span class="cerrar">&times;</span>
+                    <button id="login">
+                        Login 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                         </svg>            
+                    </button> 
+
+                    <button id="registro">
+                        Registro
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+                            <line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line>
+                         </svg>
+                    </button>
+                </div>
+                <div class="formularios">
+                    <form id="loginForm">
+                        <label for="userLogin">Usuario:</label><br/>
+                        <input type="text" name="userLogin" id="userLogin" required><br/>
+                        <label for="passwordLogin">Contraseña:</label><br/>
+                        <input type="password" name="passwordLogin" id="passwordLogin" required><br/>
+                        <input type="button" class="boton" value="Iniciar Sesion" name="logIn" id="logIn">
+                    </form>
+                    <form id="registroForm">
+                        <label for="userRegistro">Usuario:</label><br/>
+                        <input type="text" name="userRegistro" id="userRegistro" required><br/>
+                        <label for="correoRegistro">E-mail:</label><br/>
+                        <input type="text" name="correoRegistro" id="correoRegistro" required><br/>
+                        <div class="errorEmail">
+                            <p>El correo es incorrecto</p>
+                        </div>
+                        <label for="passwordRegistro">Contraseña:</label><br/>
+                        <input type="password" name="passwordRegistro" id="passwordRegistro" required><br/>
+                        <label for="password2Registro">Repite la contraseña:</label><br/>
+                        <input type="password" name="password2Registro" id="password2Registro" required><br/>
+                        <div class="errorContraseñas">
+                            <p>Las contraseñas no coinciden</p>
+                        </div>
+                        <input type="button" class="boton" value="Registrarse" name="registrar" id="registrar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Ventana modal</h2>
+    <button id="abrirModal">Login o registro</button>
+    <!-- Ventana modal, por defecto no visible -->
+    <script src="js/script09.js"></script>
+</body>
+</html>
